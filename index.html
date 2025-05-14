@@ -1,221 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gabriela Rangel | Portfolio</title>
-  <style>
-    :root {
-      --bg-dark: #121212;
-      --bg-card: #1e1e1e;
-      --accent: #00f5d4;
-      --text-main: #ffffff;
-      --text-secondary: #b0b0b0;
-    }
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: var(--bg-card);
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 15px 0;
-      z-index: 999;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text-secondary);
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover, nav a.active {
-      color: var(--accent);
-    }
-
-    section {
-      padding: 100px 20px 60px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    header {
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 36px;
-      margin: 10px 0;
-    }
-
-    header p {
-      font-size: 18px;
-      color: var(--text-secondary);
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .skills-list span {
-      background: var(--accent);
-      color: #000;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    .project-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      padding: 20px;
-      border-radius: 12px;
-    }
-
-    .project-card h3 {
-      color: var(--accent);
-    }
-
-    .project-card p {
-      font-size: 16px;
-      color: var(--text-secondary);
-    }
-
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: var(--text-secondary);
-      padding: 40px 10px 20px;
-    }
-
-    .email-button {
-      display: inline-block;
-      margin-top: 20px;
-      background: var(--accent);
-      color: #000;
-      font-weight: bold;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-  </style>
-  <script>
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section');
-      const links = document.querySelectorAll('nav a');
-      let scrollPos = window.scrollY + 100;
-      sections.forEach(section => {
-        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-          links.forEach(link => link.classList.remove('active'));
-          const activeLink = document.querySelector('nav a[href="#' + section.id + '"]');
-          if (activeLink) activeLink.classList.add('active');
-        }
-      });
-    });
-  </script>
-</head>
-<body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  
-  <section id="about">
-    <header>
-      <h1>Hi, I'm Gabriela 👩🏽‍💻</h1>
-      <p>Software Engineer focused on Cloud and Data | Passionate about Python | Woman in Tech</p>
-    </header>
-    <p>
-      I’m Gabriela Rangel, a software engineer with a passion for cloud architecture, data solutions, and helping others enter the world of technology. My journey into tech started in an unexpected way — I originally studied Civil Engineering at university.
-    </p>
-    <p>
-      During the lockdown period, I began teaching myself how to code. What started as a curiosity soon turned into a true calling. I discovered a deep love for problem-solving and building things through software. Python became my first love in programming, and I built projects, joined the Code First Girls community, and eventually transitioned into tech professionally.
-    </p>
-    <p>
-      Today, I work as a Cloud & Data Engineer at Fidelity, where I design scalable cloud systems, build Snowflake data pipelines, and automate infrastructure using Terraform. I’m committed to continuous learning and mentoring other women breaking into tech. My mission is to make tech more inclusive and empowering.
-    </p>
-  </section>
-
-    
-    
-
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    
-<div class="skills-list">
-  <span>AWS</span><span>Python</span><span>Snowflake</span><span>Terraform</span>
-  <span>Jenkins</span><span>Kubernetes</span><span>Docker</span><span>Git</span>
-  <span>CI/CD</span><span>SQL</span><span>Airflow</span><span>Kafka</span>
-  <span>Linux</span><span>Streamlit</span><span>Flask</span><span>FastAPI</span>
-  <span>GitHub Actions</span><span>CloudWatch</span><span>Visual Studio Code</span>
-</div>
-
-    
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Snowflake Data Pipelines</h3><p>Designed end-to-end CDC pipelines using Snowflake Streams, Tasks, and dbt to enable real-time data replication and transformation. Ensured performance and reliability for large-scale data operations at Fidelity.</p>
-        <p>Built CDC pipelines with Snowflake Streams & Tasks and dbt for real-time ingestion and transformation.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriela Rangel</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #0a192f;
+        color: #ccd6f6;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #0a192f;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+      nav a {
+        text-decoration: none;
+        color: #8892b0;
+        font-size: 0.9rem;
+      }
+      .hero {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem 4rem;
+      }
+      .hero h1 {
+        color: #64ffda;
+        font-size: 1rem;
+      }
+      .hero h2 {
+        font-size: 3rem;
+        margin: 0;
+        color: #ccd6f6;
+      }
+      .hero h3 {
+        font-size: 2.5rem;
+        margin-top: 0.5rem;
+        color: #8892b0;
+      }
+      .hero p {
+        margin-top: 1.5rem;
+        max-width: 540px;
+        color: #8892b0;
+      }
+      .hero .social {
+        margin-top: 2rem;
+      }
+      .social a {
+        margin-right: 1.5rem;
+        color: #64ffda;
+        font-size: 1.2rem;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div><strong>GR</strong></div>
+      <ul>
+        <li><a href="#about">01. About</a></li>
+        <li><a href="#experience">02. Experience</a></li>
+        <li><a href="#work">03. Work</a></li>
+        <li><a href="#contact">04. Contact</a></li>
+      </ul>
+    </nav>
+    <main class="hero">
+      <h1>Hi, my name is</h1>
+      <h2>Gabriela Rangel.</h2>
+      <h3>I build cloud & data solutions.</h3>
+      <p>
+        I'm a software engineer specializing in building and automating cloud-native data systems using Python, Terraform, and Snowflake. I'm passionate about inclusive tech and mentoring others breaking into the industry.
+      </p>
+      <div class="social">
+        <a href="https://github.com/gabbrangell" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/gabriela-rangel-b2444220a" target="_blank">LinkedIn</a>
       </div>
-      <div class="project-card">
-        <h3>AWS Infrastructure Automation</h3>
-        <p>Provisioned full-stack infrastructure using Terraform and AWS CodePipeline for CI/CD workflows.</p>
-      </div>
-      <div class="project-card">
-        <h3>Job Tracker App</h3><p>Built a full-stack Python/Flask application to help job seekers manage and monitor job applications. Features include tracking stages, interview notes, and reminders via email.</p>
-        <p>Python Flask application to manage and monitor job applications, built with SQLite and email alerts.</p>
-      </div>
-      <div class="project-card">
-        <h3>Data Quality Monitor</h3>
-        <p>Wrote custom Python scripts to detect anomalies in Snowflake pipelines using scheduled checks.</p>
-      </div>
-      <div class="project-card">
-        <h3>Slack Bot Assistant</h3>
-        <p>Created a Python Slack bot to automate check-ins and reminders for distributed engineering teams.</p>
-      </div>
-      <div class="project-card">
-        <h3>Finance Dashboard</h3>
-        <p>Built a Streamlit dashboard using Pandas and Plotly to track and visualize monthly expenses and savings.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <a href="mailto:gabriela-sr@outlook.com" class="email-button">📧 Email Me</a>
-  </section>
-
-  <footer>
-    Made with 💻 by Gabriela Rangel — <a href="https://www.linkedin.com/in/gabriela-rangel-b2444220a/" style="color: var(--accent); text-decoration: none;" target="_blank">LinkedIn</a>
-  </footer>
-</body>
+    </main>
+  </body>
 </html>
